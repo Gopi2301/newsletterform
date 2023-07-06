@@ -1,0 +1,71 @@
+@import '../utils/variables';
+
+body {
+    background-color: $bg-color;
+}
+
+.hero {
+    height: 50%;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffff;
+    display: flex;
+    padding: 30px 20px;
+    border-radius: 2%;
+    gap: 30px;
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            margin-bottom: 30px;
+        }
+
+        &__desc {
+            margin-bottom: 20px;
+            ;
+        }
+    }
+
+    .list-icon {
+        height: 16px;
+    }
+
+    .hero-card__list-item {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-top: 50px;
+    }
+
+    #email {
+        margin-top: 10px;
+        height: 40px;
+        border-radius: 5px;
+        // outline: transparent;
+        border: 1px solid #d7d7d7;
+
+        &:placeholder-shown {
+            padding-left: 20px;
+        }
+    }
+
+    .submit {
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #d7d7d7;
+        cursor: pointer;
+        color: #ffff;
+        background: linear-gradient(90deg, $grad-startcolor 0%, $grad-endcolor 100%);
+
+        &:hover {
+            background: #232742;
+        }
+    }
+
+}

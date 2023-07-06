@@ -1,0 +1,29 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+.hero-card {
+    color: $font-color;
+
+    .hero-card__title {
+        font-size: 40px;
+        font-weight: bold;
+        color: $font-color;
+    }
+
+    .hero-card__desc {
+        font-size: 16px;
+        color: $font-color;
+
+    }
+
+    label {
+        font-weight: bold;
+    }
+}
