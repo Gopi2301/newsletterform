@@ -133,6 +133,11 @@ table {
 body {
   background-color: #36384d;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #fff;
+  }
+}
 
 .hero, .success-hero {
   width: 50%;
@@ -149,6 +154,13 @@ body {
 @media only screen and (max-width: 600px) {
   .hero, .success-hero {
     display: block;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
+  .hero .hero-card, .success-hero .hero-card {
+    margin-top: 30px;
+    padding: 40px;
   }
 }
 .hero-card {
@@ -161,6 +173,9 @@ body {
 }
 .hero-card__desc {
   margin-bottom: 20px;
+}
+.hero-img {
+  display: block;
 }
 .hero .list-icon, .success-hero .list-icon {
   height: 16px;

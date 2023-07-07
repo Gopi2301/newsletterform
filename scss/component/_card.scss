@@ -3,6 +3,10 @@
 
 body {
     background-color: $bg-color;
+
+    @include screen (600px) {
+        background-color: #fff;
+    }
 }
 
 .hero {
@@ -19,6 +23,14 @@ body {
 
     @include screen(600px) {
         display: block;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+
+        .hero-card {
+            margin-top: 30px;
+            padding: 40px;
+        }
     }
 
     &-card {
@@ -34,6 +46,12 @@ body {
             margin-bottom: 20px;
             ;
         }
+
+
+    }
+
+    &-img {
+        display: block;
     }
 
     .list-icon {
