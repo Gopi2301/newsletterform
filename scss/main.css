@@ -185,6 +185,16 @@ body {
 .success-hero {
   width: 30%;
 }
+@media only screen and (max-width: 600px) {
+  .success-hero {
+    width: 100%;
+    height: 100vh;
+  }
+  .success-hero .hero-card {
+    padding: 0 40px;
+    height: 100%;
+  }
+}
 .success-hero .success-icon {
   height: 50px;
   margin-bottom: 20px;
