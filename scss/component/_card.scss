@@ -6,13 +6,15 @@ body {
 }
 
 .hero {
-    height: 50%;
     width: 50%;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffff;
     display: flex;
     padding: 30px 20px;
-    border-radius: 2%;
+    border-radius: 20px;
     gap: 30px;
 
     @include screen(600px) {
@@ -63,6 +65,24 @@ body {
     }
 }
 
+.success-hero {
+    @extend .hero;
+    width: 30%;
+
+    .success-icon {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .hero-card {
+        align-items: flex-start;
+    }
+}
+
+.emailInput {
+    color: $primary-color;
+}
+
 #email {
     padding-left: 20px;
     margin-top: 10px;
@@ -86,6 +106,7 @@ body {
 
 .submit {
     margin-top: 20px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #d7d7d7;
