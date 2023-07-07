@@ -144,6 +144,11 @@ body {
   border-radius: 2%;
   gap: 30px;
 }
+@media only screen and (max-width: 600px) {
+  .hero {
+    display: block;
+  }
+}
 .hero-card {
   display: flex;
   flex-direction: column;
@@ -159,25 +164,41 @@ body {
   height: 16px;
 }
 .hero .hero-card__list-item {
-  display: inline-block;
   margin-bottom: 10px;
 }
 .hero label {
   margin-top: 50px;
 }
-.hero #email {
+.hero label .errorMsg {
+  display: none;
+  color: #ce8a84;
+  float: right;
+}
+.hero .hero-img__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#email {
+  padding-left: 20px;
   margin-top: 10px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #d7d7d7;
 }
-.hero #email:-moz-placeholder-shown {
-  padding-left: 20px;
+
+.emailError {
+  background-color: #ffe8e6;
+  outline: #d59794;
+  border: 1px solid #d59794;
 }
-.hero #email:placeholder-shown {
-  padding-left: 20px;
+
+.emailSuccess {
+  background-color: green;
 }
-.hero .submit {
+
+.submit {
   margin-top: 20px;
   height: 40px;
   border-radius: 5px;
@@ -186,7 +207,7 @@ body {
   color: white;
   background: linear-gradient(90deg, #ff537a 0%, #ff673e 100%);
 }
-.hero .submit:hover {
+.submit:hover {
   background: #232742;
 }
 

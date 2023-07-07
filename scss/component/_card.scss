@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../responsive/mobile';
 
 body {
     background-color: $bg-color;
@@ -13,6 +14,10 @@ body {
     padding: 30px 20px;
     border-radius: 2%;
     gap: 30px;
+
+    @include screen(600px) {
+        display: block;
+    }
 
     &-card {
         display: flex;
@@ -34,38 +39,61 @@ body {
     }
 
     .hero-card__list-item {
-        display: inline-block;
+        // display: inline-block;
         margin-bottom: 10px;
     }
 
     label {
         margin-top: 50px;
-    }
 
-    #email {
-        margin-top: 10px;
-        height: 40px;
-        border-radius: 5px;
-        // outline: transparent;
-        border: 1px solid #d7d7d7;
-
-        &:placeholder-shown {
-            padding-left: 20px;
+        .errorMsg {
+            display: none;
+            color: #ce8a84;
+            float: right;
         }
     }
 
-    .submit {
-        margin-top: 20px;
-        height: 40px;
-        border-radius: 5px;
-        border: 1px solid #d7d7d7;
-        cursor: pointer;
-        color: #ffff;
-        background: linear-gradient(90deg, $grad-startcolor 0%, $grad-endcolor 100%);
+    .hero-img__img {
+        width: 100%;
+        object-fit: cover;
 
-        &:hover {
-            background: #232742;
-        }
+        // @include screen(600px) {
+        //     position: relative;
+        //     top: 0
     }
+}
 
+#email {
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    // outline: transparent;
+    border: 1px solid #d7d7d7;
+
+}
+
+
+.emailError {
+    background-color: #ffe8e6;
+    outline: #d59794;
+    border: 1px solid #d59794;
+}
+
+.emailSuccess {
+    background-color: green;
+}
+
+.submit {
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #d7d7d7;
+    cursor: pointer;
+    color: #ffff;
+    background: linear-gradient(90deg, $grad-startcolor 0%, $grad-endcolor 100%);
+
+    &:hover {
+        background: #232742;
+    }
 }
